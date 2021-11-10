@@ -26,4 +26,11 @@ class UserModel extends BaseModel
         return $stmt->fetch();
 
     }
+
+    public function getCustomer()
+    {
+        $sql = "SELECT * FROM $this->table WHERE `role` = 2";
+        $stmt = $this->dbConnect->query($sql);
+        return $stmt->fetchAll();
+    }
 }

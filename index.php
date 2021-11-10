@@ -4,6 +4,7 @@ require_once __DIR__ . "/vendor/autoload.php";
 use App\controller\AuthController;
 use App\controller\CategoryController;
 use App\controller\ProductController;
+use App\controller\UserController;
 use App\model\CategoryModel;
 use App\model\ProductModel;
 use App\model\UserModel;
@@ -13,8 +14,10 @@ session_start();
 $productController = new ProductController();
 $categoryController = new CategoryController();
 $authController = new AuthController();
+$userController = new UserController();
 $productModel = new ProductModel();
 $categoryModel = new CategoryModel();
+
 $page = (isset($_GET["page"])) ? $_GET["page"] : "";
 $username = ($_SESSION["username"] ?? "");
 ?>
@@ -33,6 +36,7 @@ $username = ($_SESSION["username"] ?? "");
     <a href="index.php?page=logout">Logout</a>
     <a href="index.php?page=product-list">Product</a>
     <a href="index.php?page=category-list">Category</a>
+    <a href="index.php?page=user-list">User</a>
 </div>
 <?php
 switch ($page) {
@@ -85,7 +89,13 @@ switch ($page) {
             $categoryController->edit($id, $_REQUEST);
         }
         break;
-
+    case "user-list":
+        $userController->getCustomer();
+        break;
+    case "user-delete":
+        $id = $_GET["id"];
+        $userController->delete($id);
+        break;
     case "login":
         if ($_SERVER["REQUEST_METHOD"] == "GET") {
             $authController->showFormLogin();
