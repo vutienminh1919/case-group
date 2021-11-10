@@ -17,8 +17,6 @@ $productModel = new ProductModel();
 $categoryModel = new CategoryModel();
 $page = (isset($_GET["page"])) ? $_GET["page"] : "";
 $username = ($_SESSION["username"] ?? "");
-
-1
 ?>
 <!doctype html>
 <html lang="en">
