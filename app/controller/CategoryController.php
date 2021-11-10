@@ -54,11 +54,12 @@ class CategoryController
     {
         $category = $this->categoryModel->getById($id);
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            $data = [
+            $data3 = [
                 "name" => $request['name'],
+                "id" => $id
             ];
         }
-        $this->categoryModel->edit($data);
+        $this->categoryModel->edit($data3);
         header("Location:index.php?page=category-list");
 
     }

@@ -76,7 +76,6 @@ switch ($page) {
     case "category-delete":
         $id = $_GET["id"];
         $categoryController->delete($id);
-        header("Location:index.php?page=category-list");
         break;
     case "category-edit":
         $id = $_GET["id"];
@@ -103,4 +102,4 @@ switch ($page) {
 ?>
 
 </body>
-</html>opop
+</html>
