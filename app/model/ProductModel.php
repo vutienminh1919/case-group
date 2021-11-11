@@ -29,4 +29,12 @@ class ProductModel extends BaseModel
         $stmt->bindParam(5, $data['id']);
         $stmt->execute();
     }
+
+    public function getProduct()
+    {
+       $sql =  "SELECT products.*, categories.name FROM products 
+INNER Join categories on products.category_id = categories.id";
+        $stmt = $this->dbConnect->query($sql);
+        return $stmt->fetchAll();
+    }
 }

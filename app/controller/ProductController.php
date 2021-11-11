@@ -16,7 +16,7 @@ class ProductController
 
     public function index()
     {
-        $products = $this->productModel->getAll();
+        $products = $this->productModel->getProduct();
         include_once "app/view/product/list.php";
     }
 
