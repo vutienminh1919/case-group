@@ -1,4 +1,4 @@
-<form method="post">
+<form method="post" enctype="multipart/form-data">
     <input type="text" name="name" placeholder="ten san pham">
     <input type="text" name="price" placeholder="gia san pham">
     <input type="text" name="description" placeholder="mo ta san pham">

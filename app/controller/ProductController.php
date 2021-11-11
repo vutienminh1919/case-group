@@ -43,6 +43,7 @@ class ProductController
             "name" => $_REQUEST['name'],
             "price" => $_REQUEST['price'],
             "description" => $_REQUEST['description'],
+            "category_id" => $_REQUEST['category_id'],
             "image" => $filepath
         ];
         $this->productModel->create($data2);
@@ -78,6 +79,7 @@ class ProductController
                 "name" => $request['name'],
                 "price" => $request['price'],
                 "description" => $request['description'],
+                "category_id" => $request['category_id'],
                 "id" => $id
             ];
         }
