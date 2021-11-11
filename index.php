@@ -37,7 +37,7 @@ $role = ($_SESSION["role"] ?? "");
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
-<div class="navbar">
+<div class="navbar container">
     <p>Name: <?php echo $username; ?></p>
     <a href="index.php?page=logout">Logout</a>
     <a href="index.php?page=product-list">Product</a>
@@ -129,9 +129,7 @@ switch ($page) {
         }
         break;
     case "home":
-        if ($role == 2) {
-            $productController->home();
-        }
+        $productController->home();
         break;
     default:
             $productController->home();

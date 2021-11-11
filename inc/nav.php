@@ -1,3 +1,8 @@
+<?php
+session_start();
+$role = ($_SESSION["role"] ?? "");
+$username = ($_SESSION["username"] ?? "");
+?>
 <div class="container">
     <nav class="navbar navbar-expand-lg navbar-light bg-light ">
         <div class="container">
@@ -10,7 +15,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
                            data-bs-toggle="dropdown" aria-expanded="false">
                             CATEGORY
                         </a>
@@ -23,12 +28,25 @@
                             <li><a class="dropdown-item" href="#">Something else here</a></li>
                         </ul>
                     </li>
+                    <?php if ($role == 1) : ?>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page"
+                               href="index.php?page=product-list">PRODUCT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.php?page=user-list">USER</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.php?page=category-list">CATEGORY ADMIN</a>
+                        </li>
+                    <?php endif; ?>
+                    <form class="d-flex" action="" method="get">
+                        <input class="form-control me-2" type="search" name="search" placeholder="Search"
+                               aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
                 </ul>
-                <form class="d-flex" action="" method="get">
-                    <input class="form-control me-2" type="search" name="search" placeholder="Search"
-                           aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
+                <p>Name: <?php echo $username; ?></p>
             </div>
         </div>
     </nav>
