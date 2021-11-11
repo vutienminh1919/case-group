@@ -37,6 +37,7 @@
 <h2 style="text-align:center">Product Card</h2>
 
 <div class="card">
+    <img src="<?php echo $product['image']; ?>">
     <h1><?php echo $product['name']; ?></h1>
     <p> <?php echo $product['price']; ?></p>
     <p> <?php echo $product["description"];?></p>

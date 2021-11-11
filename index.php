@@ -47,13 +47,13 @@ $role = ($_SESSION["role"] ?? "");
 </div>
 <?php
 switch ($page) {
-case "product-list":
-if ($role == 1) {
-    $authController->checkAuth();
-    $productController->index();
-}
-    break;
-case
+    case "product-list":
+        if ($role == 1) {
+            $authController->checkAuth();
+            $productController->index();
+        }
+        break;
+    case
     "product-create":
         if ($_SERVER["REQUEST_METHOD"] == "GET") {
             $productController->showFormCreate();
@@ -142,5 +142,4 @@ case
         crossorigin="anonymous"></script>
 </body>
 </html>
-12
 

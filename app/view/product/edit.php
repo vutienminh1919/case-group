@@ -1,6 +1,6 @@
 
-<form method="post">
-    <form method="post">
+
+    <form method="post" enctype="multipart/form-data">
         <input type="text" name="id" value="<?php echo $product['id'] ?>" hidden>
         <input type="text" name="name" value="<?php echo $product['name'] ?>">
         <input type="text" name="price" value="<?php echo $product['price'] ?>">
