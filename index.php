@@ -123,9 +123,7 @@ switch ($page) {
         $authController->logout();
         break;
     case "home":
-//        if ($role == 2) {
             $productController->home();
-//        }
         break;
     default:
         $productController->home();
