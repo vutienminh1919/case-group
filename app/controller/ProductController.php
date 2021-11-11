@@ -2,15 +2,18 @@
 
 namespace App\controller;
 
+use App\model\CategoryModel;
 use App\model\ProductModel;
 
 class ProductController
 {
     private $productModel;
+    private $categoryModel;
 
     public function __construct()
     {
         $this->productModel = new ProductModel();
+        $this->categoryModel = new CategoryModel();
 
     }
 
@@ -22,6 +25,7 @@ class ProductController
 
     public function showFormCreate()
     {
+        $categories = $this->categoryModel->getAll();
         include_once "app/view/product/create.php";
 
     }
@@ -43,7 +47,7 @@ class ProductController
             "name" => $_REQUEST['name'],
             "price" => $_REQUEST['price'],
             "description" => $_REQUEST['description'],
-            "category_id" => $_REQUEST['category_id'],
+//            "category_id" => $_REQUEST['category_id'],
             "image" => $filepath
         ];
         $this->productModel->create($data2);

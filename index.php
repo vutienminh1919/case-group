@@ -49,8 +49,6 @@ $role = ($_SESSION["role"] ?? "");
 switch ($page) {
     case "product-list":
 
-//        $authController->checkAuth();
-//        $productController->index();
         if ($role == 1) {
             $authController->checkAuth();
             $productController->index();
@@ -67,7 +65,6 @@ switch ($page) {
     case "product-delete":
         $id = $_GET["id"];
         $productController->delete($id);
-        header("Location:index.php");
         break;
     case "product-edit":
         $id = $_GET["id"];
@@ -132,9 +129,7 @@ switch ($page) {
         }
         break;
     case "home":
-        if ($role == 2) {
             $productController->home();
-        }
         break;
     default:
             $productController->home();

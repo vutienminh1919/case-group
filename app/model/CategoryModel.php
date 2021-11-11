@@ -6,18 +6,18 @@ class CategoryModel extends BaseModel
 
     public function create($data)
     {
-        $sql = "INSERT INTO $this->table(`name`) VALUES (?)";
+        $sql = "INSERT INTO $this->table (`name_category`) VALUES ?";
         $stmt = $this->dbConnect->prepare($sql);
-        $stmt->bindParam(1, $data["name"]);
+        $stmt->bindParam(1, $data["name_category"]);
         $stmt->execute();
     }
 
     public function edit($data)
     {
 
-        $sql = "UPDATE $this->table SET `name` = ? where `id` = ?";
+        $sql = "UPDATE $this->table SET `name_category` = ? where `id` = ?";
         $stmt = $this->dbConnect->prepare($sql);
-        $stmt->bindParam(1, $data["name"]);
+        $stmt->bindParam(1, $data["name_category"]);
         $stmt->bindParam(2, $data['id']);
         $stmt->execute();
     }
