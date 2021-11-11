@@ -6,7 +6,7 @@ include_once "inc/carousel.php";
     <div class="container">
         <div class="row">
             <?php foreach ($products as $product): ?>
-                <div class="col-3 mb-3">
+                <div class="col-3 mb-5 ">
                     <div class="card ">
                         <img src="<?php echo isset($product['image'])?$product['image']:'uploads/default.jpg';?>" class="card-img-top" alt="...">
                         <div class="card-body">

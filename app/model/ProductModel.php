@@ -21,7 +21,7 @@ class ProductModel extends BaseModel
     public function edit($data)
     {
 
-        $sql = "UPDATE $this->table SET `name` = ?, `price` = ?, `description` = ?,category_id = ?, `image` = ? where `id` = ?";
+        $sql = "UPDATE $this->table SET `name` = ?, `price` = ?, `description` = ?,`category_id`= ?, `image` = ? where `id` = ?";
         $stmt = $this->dbConnect->prepare($sql);
         $stmt->bindParam(1, $data["name"]);
         $stmt->bindParam(2, $data["price"]);

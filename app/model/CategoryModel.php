@@ -6,7 +6,7 @@ class CategoryModel extends BaseModel
 
     public function create($data)
     {
-        $sql = "INSERT INTO $this->table (`name_category`) VALUES ?";
+        $sql = "INSERT INTO $this->table (`name_category`) VALUES (?)";
         $stmt = $this->dbConnect->prepare($sql);
         $stmt->bindParam(1, $data["name_category"]);
         $stmt->execute();
