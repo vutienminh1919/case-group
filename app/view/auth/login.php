@@ -126,7 +126,7 @@
 
     <button type="submit" name="submit">Login</button>
     <br>
-    <a href="register-form.php" target="_blank">Sign up here!</a>
+    <a href="index.php?page=register" target="_blank">Sign up here!</a>
 
 
 </form>
