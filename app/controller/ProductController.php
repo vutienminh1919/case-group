@@ -2,15 +2,18 @@
 
 namespace App\controller;
 
+use App\model\CategoryModel;
 use App\model\ProductModel;
 
 class ProductController
 {
     private $productModel;
+    private $categoryModel;
 
     public function __construct()
     {
         $this->productModel = new ProductModel();
+        $this->categoryModel = new CategoryModel();
 
     }
 
@@ -22,6 +25,7 @@ class ProductController
 
     public function showFormCreate()
     {
+        $categories = $this->categoryModel->getAll();
         include_once "app/view/product/create.php";
 
     }
@@ -66,6 +70,7 @@ class ProductController
 
     public function showFormEdit()
     {
+        $categories = $this->categoryModel->getAll();
         $id = $_REQUEST["id"];
         $product = $this->productModel->getById($id);
         include_once "app/view/product/edit.php";
@@ -73,6 +78,7 @@ class ProductController
 
     public function edit($id, $request)
     {
+
         $product = $this->productModel->getById($id);
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $data = [
@@ -91,6 +97,7 @@ class ProductController
     public function home()
     {
         $products = $this->productModel->getAll();
+        $categories = $this->categoryModel->getAll();
         include_once "app/view/layout/home.php";
 
     }
@@ -102,9 +109,28 @@ class ProductController
         include "app/view/layout/search.php";
     }
 
-    public function addToCart()
+
+    public function addToCart($id)
     {
-        
+        $cart = isset($_SESSION["cart"]) ? $_SESSION["cart"] : [];
+        $product = $this->productModel->getById($id);
+        if (isset($cart[$id])) {
+            $cart[$id] = array(
+                "id" => $product["id"],
+                "name" => $product["name"],
+                "image" => $product["image"],
+                "price" => $product["price"],
+                "quantity" => 1
+            );
+        }else {
+            $cart[$id]["quantity"] += 1;
+        }
+        $_SESSION["cart"] = $cart;
+        header("location:index.php?page=home");
     }
 
+    public function showCart()
+    {
+        include_once "app/view/layout/cart";
+    }
 }

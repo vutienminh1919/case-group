@@ -29,7 +29,7 @@ class CategoryController
     public function create($data)
     {
         $data2 = [
-            "name" => $data['name']
+            "name_category" => $data['name_category']
         ];
         $this->categoryModel->create($data2);
         header("Location:index.php?page=category-list");
@@ -55,7 +55,7 @@ class CategoryController
         $category = $this->categoryModel->getById($id);
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $data3 = [
-                "name" => $request['name'],
+                "name_category" => $request['name_category'],
                 "id" => $id
             ];
         }

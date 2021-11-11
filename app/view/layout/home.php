@@ -12,12 +12,10 @@ $role = ($_SESSION["role"] ?? "");
                     <div class="card ">
                         <img src="<?php echo isset($product['image'])?$product['image']:'uploads/default.jpg';?>" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title"><?php echo $product["name"] ?></h5>
-                            <h6 class="card-text">
-                                <?php echo $product["price"] ?>
-                            </h6>
-                            <p class="card-text"><?php echo $product["description"] ?></p>
-                            <button class="btn btn-primary">Mua</button>
+                            <h2 class="card-title"><?php echo $product["name"] ?></h2>
+                            <h5 class="card-text">
+                                <?php echo $product["price"]  ?> ₫
+                            </h5>
                             <a href="index.php?page=product-detail&id=<?php echo $product["id"] ?>" class="btn btn-primary">Chi tiết sản phẩm</a>
                         </div>
                     </div>

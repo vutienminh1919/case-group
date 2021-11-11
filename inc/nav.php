@@ -20,12 +20,11 @@ $username = ($_SESSION["username"] ?? "");
                             CATEGORY
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <?php foreach ($categories as $category) :?>
+
+                            <li><a class="dropdown-item" href="#"><?php echo $category["name_category"]?></a></li>
+                                <li><hr class="dropdown-divider"></li>
+                            <?php endforeach;?>
                         </ul>
                     </li>
                     <?php if ($role == 1) : ?>
@@ -46,8 +45,7 @@ $username = ($_SESSION["username"] ?? "");
                         <button class="btn btn-outline-success" type="submit">Search</button>
                     </form>
                 </ul>
-                <li><a class="dropdown-item" href="index.php?page=logout">LOGOUT</a></li> <li class="nav-item">
-                    <a class="nav-link active" href="index.php?page=category-list">CATEGORY-ADMIN</a>
+                <a class="nav-link active" href="index.php?page=product-cart">CART(<?php echo isset($_SESSION["cart"])?count($_SESSION["cart"]):?></a>
                 <div class="dropdown">
                     <a class="nav-link dropdown-toggle active" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                         <?php echo $username; ?>

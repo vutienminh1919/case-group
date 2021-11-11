@@ -1,7 +1,7 @@
 <div class="container">
 
     <a href="index.php?page=product-create">add new product</a>
-    <table border="1px" class="table">
+    <table border="1px" class="table table-bordered" style="border-collapse: collapse">
         <thead class="table-dark">
         <tr>
             <th>ID</th>

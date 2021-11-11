@@ -35,6 +35,8 @@ $role = ($_SESSION["role"] ?? "");
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link href="style.css" rel="stylesheet">
+
 </head>
 <body>
 <div class="navbar container">
@@ -64,7 +66,6 @@ switch ($page) {
     case "product-delete":
         $id = $_GET["id"];
         $productController->delete($id);
-        header("Location:index.php");
         break;
     case "product-edit":
         $id = $_GET["id"];
@@ -81,6 +82,9 @@ switch ($page) {
     case "product-search":
         $productController->showResultSearch();
         break;
+    case "product-cart":
+        $id = $_GET["cart"]
+        $productController->showF();
     case "category-list":
         $authController->checkAuth();
         $categoryController->index();
@@ -140,4 +144,5 @@ switch ($page) {
         crossorigin="anonymous"></script>
 </body>
 </html>
+
 
