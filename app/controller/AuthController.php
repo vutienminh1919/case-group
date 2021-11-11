@@ -26,6 +26,7 @@ class AuthController
         if ($this->userModel->checkLogin($email, $password)) {
           $user = $this->userModel->getByEmail($email);
            $_SESSION["username"] = $user["name"];
+           $_SESSION["role"] = $user["role"];
             header("Location:index.php");
         }else{
             var_dump("tai khoan khong dung");
