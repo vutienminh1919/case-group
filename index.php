@@ -39,14 +39,6 @@ $role = ($_SESSION["role"] ?? "");
 
 </head>
 <body>
-<div class="navbar container">
-    <p>Name: <?php echo $username; ?></p>
-    <a href="index.php?page=logout">Logout</a>
-    <a href="index.php?page=product-list">Product</a>
-    <a href="index.php?page=category-list">Category</a>
-    <a href="index.php?page=user-list">User</a>
-    <a href="index.php?page=home">Home</a>
-</div>
 <?php
 switch ($page) {
     case "product-list":

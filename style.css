@@ -21,4 +21,11 @@ img.d-block.w-100 {
 .body{
     background-image: url("uploads/background.jpeg");
 }
+.cardtotal {
+    width: 100%;
+    max-width: 100%;
+}
+image{
+    max-width: 100%;
+}
 

@@ -107,30 +107,4 @@ class ProductController
         $product = $this->productModel->search($id);
         include "app/view/layout/search.php";
     }
-//    public function edit($id, $request)
-//    {
-//        $filepath = "";
-//        if (isset($_FILES["file"])) {
-//            $filepath = "uploads/" . $_FILES["file"]["name"];
-//            move_uploaded_file($_FILES["file"]["tmp_name"], $filepath);
-//
-//        }
-//
-//        if (isset($_REQUEST["submit"])) {
-//            $product = $this->productModel->getById($id);
-//            if ($_SERVER["REQUEST_METHOD"] == "POST") {
-//                $data2 = [
-//                    "name" => $request["name"],
-//                    "price" => $request["price"],
-//                    "description" => $request["description"],
-//                    "category_id" => $request["category_id"],
-//                    "image" => $filepath,
-//                    "id" => $id
-//                ];
-//            }
-//            $this->productModel->edit($data2);
-//            header("Location:index.php?page=user-list");
-//        }
-//
-//    }
 }

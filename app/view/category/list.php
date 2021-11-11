@@ -1,6 +1,10 @@
+<?php
+include_once "inc/header.php";
+include_once "inc/nav.php";
+?>
 <div class="container">
-    <a href="index.php?page=category-create">add new category</a>
-    <table border="1px" class="table">
+    <a type="button" class="btn btn-primary" href="index.php?page=category-create">add new category</a>
+    <table border="1px" class="table table-bordered">
         <thead class="table-dark">
         <tr>
             <th>ID</th>
@@ -14,9 +18,9 @@
                 <tr>
                     <td><?php echo $category["id"] ?></td>
                     <td><?php echo $category["name_category"] ?></td>
-                    <td><a onclick=" return confirm('are you sure ?')"
+                    <td><a type="button" class="btn btn-danger" onclick=" return confirm('are you sure ?')"
                            href="index.php?page=category-delete&id=<?php echo $category["id"] ?>">Delete</a></td>
-                    <td><a href="index.php?page=category-edit&id=<?php echo $category["id"] ?>">Edit</a></td>
+                    <td><a type="button" class="btn btn-success" href="index.php?page=category-edit&id=<?php echo $category["id"] ?>">Edit</a></td>
 
                 </tr>
             <?php endforeach; ?>
