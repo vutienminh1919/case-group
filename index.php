@@ -132,14 +132,12 @@ switch ($page) {
         }
         break;
     case "home":
-        $productController->home();
-        break;
-    default:
         if ($role == 2) {
             $productController->home();
-        } else if ($role == 1) {
-            $productController->index();
         }
+        break;
+    default:
+            $productController->home();
 }
 ?>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
