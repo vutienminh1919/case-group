@@ -37,7 +37,7 @@ $username = ($_SESSION["username"] ?? "");
                             <a class="nav-link active" href="index.php?page=user-list">USER</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="index.php?page=category-list">CATEGORY ADMIN</a>
+                            <a class="nav-link active" href="index.php?page=category-list">CATEGORY-ADMIN</a>
                         </li>
                     <?php endif; ?>
                     <form class="d-flex" action="" method="get">
@@ -46,7 +46,15 @@ $username = ($_SESSION["username"] ?? "");
                         <button class="btn btn-outline-success" type="submit">Search</button>
                     </form>
                 </ul>
-                <p>Name: <?php echo $username; ?></p>
+                <div class="dropdown">
+                    <a class="nav-link dropdown-toggle active" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                        <?php echo $username; ?>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <li><a class="dropdown-item" href="index.php?page=logout">LOGOUT</a></li>
+
+                    </ul>
+                </div>
             </div>
         </div>
     </nav>

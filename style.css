@@ -18,4 +18,7 @@ img.d-block.w-100 {
 .product-group {
     margin-right: 10PX;
 }
+.body{
+    background-image: url("uploads/background.jpeg");
+}
 
