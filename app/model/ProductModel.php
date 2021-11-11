@@ -32,8 +32,14 @@ class ProductModel extends BaseModel
 
     public function getProduct()
     {
-       $sql =  "SELECT products.*, categories.name_category FROM products 
-INNER Join categories on products.category_id = categories.id";
+        $sql = "SELECT products.*, categories.name_category FROM products INNER Join categories on products.category_id = categories.id";
+        $stmt = $this->dbConnect->query($sql);
+        return $stmt->fetchAll();
+    }
+
+    public function search($id)
+    {
+        $sql = "select * from $this->table where name like %$id% or description like %$id%";
         $stmt = $this->dbConnect->query($sql);
         return $stmt->fetchAll();
     }

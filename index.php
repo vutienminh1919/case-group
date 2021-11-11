@@ -44,9 +44,7 @@ switch ($page) {
     case "product-list":
         $authController->checkAuth();
         $productController->index();
-
         break;
-
     case "product-create":
         if ($_SERVER["REQUEST_METHOD"] == "GET") {
             $productController->showFormCreate();
@@ -70,6 +68,9 @@ switch ($page) {
     case "product-detail":
         $id = $_GET["id"];
         $productController->showDetail($id);
+        break;
+    case "product-search":
+        $productController->showResultSearch();
         break;
     case "category-list":
         $authController->checkAuth();

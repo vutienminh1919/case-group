@@ -92,4 +92,12 @@ class ProductController
         include_once "app/view/layout/home.php";
 
     }
+
+    public function showResultSearch()
+    {
+        $id = $_GET["search"];
+        $product = $this->productModel->search($id);
+        include "app/view/layout/search.php";
+    }
+
 }
