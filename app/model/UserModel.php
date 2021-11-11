@@ -1,4 +1,5 @@
 <?php
+
 namespace App\model;
 
 
@@ -21,7 +22,7 @@ class UserModel extends BaseModel
     {
         $sql = "SELECT * FROM $this->table WHERE email = :email";
         $stmt = $this->dbConnect->prepare($sql);
-        $stmt->bindParam(":email",$email);
+        $stmt->bindParam(":email", $email);
         $stmt->execute();
         return $stmt->fetch();
 
@@ -33,4 +34,15 @@ class UserModel extends BaseModel
         $stmt = $this->dbConnect->query($sql);
         return $stmt->fetchAll();
     }
+
+    public function checkRegister($data)
+    {
+        $sql = "INSERT INTO $this->table (`name`,`email`,`password`) VALUES (?,?,?)";
+        $stmt = $this->dbConnect->prepare($sql);
+        $stmt->bindParam(1, $data["name"]);
+        $stmt->bindParam(2, $data["email"]);
+        $stmt->bindParam(3, $data["password"]);
+        $stmt->execute();
+    }
+
 }

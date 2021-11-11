@@ -47,10 +47,9 @@ $role = ($_SESSION["role"] ?? "");
 <?php
 switch ($page) {
     case "product-list":
-        if ($role == 1){
             $authController->checkAuth();
             $productController->index();
-        }
+
         break;
 
     case "product-create":
@@ -117,14 +116,22 @@ switch ($page) {
     case "logout":
         $authController->logout();
         break;
-    case "home":
-        if ($role = 2) {
-            $productController->home();
+    case "register":
+        if ($_SERVER["REQUEST_METHOD"] == "GET") {
+            $authController->showFormRegister();
+        } else {
+            $authController->register($_REQUEST);
         }
-
+        break;
+    case "home":
+            $productController->home();
         break;
     default:
-        $productController->home();
+        if ($role == 2 ) {
+            $productController->home();
+        }else if ($role == 1 ){
+            $productController->index();
+        }
 }
 ?>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
