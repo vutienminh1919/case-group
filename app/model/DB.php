@@ -13,7 +13,7 @@ class DB
     {
         $this->dsn = "mysql:host=localhost:3306;dbname=demo-shop;charset=utf8";
         $this->username = "root";
-        $this->password = "24091996";
+        $this->password = "pengalx1";
     }
 
     public function connect()
