@@ -31,13 +31,18 @@ class ProductController
         $filepath = "";
         if (isset($_FILES["file"])) {
             $filepath = "uploads/" . $_FILES["file"]["name"];
-            move_uploaded_file($_FILES["file"]["tmp_name"], $filepath);
+
+            if (move_uploaded_file($_FILES["file"]["tmp_name"], $filepath)) {
+                echo "<img src=" . $filepath . " height=200 width=300 />";
+            } else {
+                echo "Error !!";
+            }
         }
 
         $data2 = [
-            "name" => $data['name'],
-            "price" => $data['price'],
-            "description" => $data['description'],
+            "name" => $_REQUEST['name'],
+            "price" => $_REQUEST['price'],
+            "description" => $_REQUEST['description'],
             "image" => $filepath
         ];
         $this->productModel->create($data2);
@@ -78,6 +83,13 @@ class ProductController
         }
         $this->productModel->edit($data);
         header("Location:index.php?page=product-list");
+
+    }
+
+    public function home()
+    {
+        $products = $this->productModel->getAll();
+        include_once "app/view/layout/home.php";
 
     }
 }

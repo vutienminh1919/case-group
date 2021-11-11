@@ -32,7 +32,7 @@ class ProductModel extends BaseModel
 
     public function getProduct()
     {
-       $sql =  "SELECT products.*, categories.name FROM products 
+       $sql =  "SELECT products.*, categories.name_category FROM products 
 INNER Join categories on products.category_id = categories.id";
         $stmt = $this->dbConnect->query($sql);
         return $stmt->fetchAll();

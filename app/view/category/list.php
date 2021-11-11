@@ -12,7 +12,7 @@
         <?php foreach ($categories as $category): ?>
             <tr>
                 <td><?php echo $category["id"] ?></td>
-                <td><?php echo $category["name"] ?></td>
+                <td><?php echo $category["name_category"] ?></td>
                 <td><a onclick=" return confirm('are you sure ?')"
                        href="index.php?page=category-delete&id=<?php echo $category["id"] ?>">Delete</a></td>
                 <td><a href="index.php?page=category-edit&id=<?php echo $category["id"] ?>">Edit</a></td>
