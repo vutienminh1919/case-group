@@ -47,16 +47,16 @@ $role = ($_SESSION["role"] ?? "");
 </div>
 <?php
 switch ($page) {
-case "product-list":
+    case "product-list":
 
-$authController->checkAuth();
-$productController->index();
-if ($role == 1) {
-    $authController->checkAuth();
-    $productController->index();
-}
-    break;
-case
+//        $authController->checkAuth();
+//        $productController->index();
+        if ($role == 1) {
+            $authController->checkAuth();
+            $productController->index();
+        }
+        break;
+    case
     "product-create":
         if ($_SERVER["REQUEST_METHOD"] == "GET") {
             $productController->showFormCreate();
@@ -132,7 +132,7 @@ case
         }
         break;
     case "home":
-            $productController->home();
+        $productController->home();
         break;
     default:
         if ($role == 2) {
