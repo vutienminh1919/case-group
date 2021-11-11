@@ -22,8 +22,9 @@
                 <td><?php echo $product["description"] ?></td>
                 <td><?php echo $product["name_category"] ?></td>
                 <td><img width="100px" src="<?php echo $product["image"] ?>"</td>
-                <td><a onclick="return confirm('Are you sure ?')" href="index.php?page=product-delete&id=<?php echo $product["id"] ?>">Delete</a></td>
-                <td><a href="index.php?page=product-edit&id=<?php echo $product["id"] ?>">Edit</a></td>
+                <td><a onclick="return confirm('Are you sure ?')" href="index.php?page=product-delete&id=<?php echo $product["id"] ?>">Xóa</a></td>
+                <td><a href="index.php?page=product-edit&id=<?php echo $product["id"] ?>">Sửa</a></td>
+                <td><a href="index.php?page=product-detail&id=<?php echo $product["id"] ?>">Chi tiết</a></td>
 
             </tr>
         <?php endforeach; ?>
