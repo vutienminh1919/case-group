@@ -22,7 +22,8 @@ $categoryModel = new CategoryModel();
 $page = (isset($_GET["page"])) ? $_GET["page"] : "";
 $username = ($_SESSION["username"] ?? "");
 $role = ($_SESSION["role"] ?? "");
-
+//var_dump($role);
+//die();
 ?>
 <!doctype html>
 <html lang="en">
@@ -46,13 +47,17 @@ $role = ($_SESSION["role"] ?? "");
 </div>
 <?php
 switch ($page) {
-    case "product-list":
-            $authController->checkAuth();
-            $productController->index();
+case "product-list":
 
-        break;
-
-    case "product-create":
+$authController->checkAuth();
+$productController->index();
+if ($role == 1) {
+    $authController->checkAuth();
+    $productController->index();
+}
+    break;
+case
+    "product-create":
         if ($_SERVER["REQUEST_METHOD"] == "GET") {
             $productController->showFormCreate();
         } else {
@@ -75,6 +80,9 @@ switch ($page) {
     case "product-detail":
         $id = $_GET["id"];
         $productController->showDetail($id);
+        break;
+    case "product-search":
+        $productController->showResultSearch();
         break;
     case "category-list":
         $authController->checkAuth();
@@ -127,9 +135,9 @@ switch ($page) {
             $productController->home();
         break;
     default:
-        if ($role == 2 ) {
+        if ($role == 2) {
             $productController->home();
-        }else if ($role == 1 ){
+        } else if ($role == 1) {
             $productController->index();
         }
 }
@@ -139,4 +147,5 @@ switch ($page) {
         crossorigin="anonymous"></script>
 </body>
 </html>
+rhgth
 
