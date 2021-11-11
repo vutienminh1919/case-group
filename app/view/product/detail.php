@@ -39,7 +39,7 @@
 <div class="card">
     <h1><?php echo $product['name']; ?></h1>
     <p> <?php echo $product['price']; ?></p>
-    <p>
+    <p> <?php echo $product["description"];?></p>
         <button>Add to Cart</button>
     </p>
 </div>

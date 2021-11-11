@@ -80,5 +80,6 @@ class ProductController
         header("Location:index.php?page=product-list");
 
     }
+
 }
 

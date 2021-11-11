@@ -66,6 +66,10 @@ switch ($page) {
             $productController->edit($id, $_REQUEST);
         }
         break;
+    case "product-detail":
+        $id = $_GET["id"];
+        $productController->showDetail($id);
+        break;
     case "category-list":
         $authController->checkAuth();
         $categoryController->index();
