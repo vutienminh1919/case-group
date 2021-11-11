@@ -102,4 +102,9 @@ class ProductController
         include "app/view/layout/search.php";
     }
 
+    public function addToCart()
+    {
+        
+    }
+
 }
