@@ -2,7 +2,7 @@
     <div class="container mt-5">
         <div class="row ">
             <div class="col-lg-3 col-md-6 col-sm-12">
-                <h2 style="margin-top: 20px"><a href="https://www.facebook.com" target="_blank"><img src="uploads/lappdumb.jpg" width="60" height="60"
+                <h2 style="margin-top: 20px"><a href="https://www.facebook.com/PenGalx" target="_blank"><img src="uploads/lappdumb.jpg" width="60" height="60"
                                      alt=""></a></h2>
                 <p>
                     Bàn phím cơ là gì ?
@@ -32,6 +32,7 @@
                 <p>Phone 2: 0352.359.396</p>
                 <p>Email: vutienminh1919@gmail.com</p>
                 <p>Email: chithanhvtpt@gmail.com</p>
+                <p>Email: Version : beta / comming soon</p>
             </div>
         </div>
     </div>

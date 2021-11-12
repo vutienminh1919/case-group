@@ -226,8 +226,6 @@ function validate($data): bool
                 <input type="password" id="rePassword" name="password-repeat" placeholder="Re-enter your password"><br>
                 <p><?php echo $errors['password-repeat'] ?? "" ?></p>
 
-                <input type="checkbox"><span>I agree to the Privacy Policy</span>
-
             </fieldset>
             <button type="submit" name="submit">Sign Up</button>
             <a href="index.php?page=login" type="button" class="btn btn-danger">Back</a>
