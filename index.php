@@ -38,6 +38,7 @@ $role = ($_SESSION["role"] ?? "");
 </head>
 <body>
 <?php
+
 switch ($page) {
     case "product-list":
         if ($role == 1) {
@@ -81,6 +82,10 @@ switch ($page) {
     case "category-list":
         $authController->checkAuth();
         $categoryController->index();
+        break;
+    case "category-product-list":
+        $id = $_GET["id"];
+        $categoryController->getCategoryAkko($id);
         break;
     case"category-create":
         if ($_SERVER["REQUEST_METHOD"] == "GET") {
@@ -149,5 +154,6 @@ switch ($page) {
         crossorigin="anonymous"></script>
 </body>
 </html>
+12321
 
 

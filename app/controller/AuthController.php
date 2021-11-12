@@ -70,6 +70,7 @@ class AuthController
                 echo $e->getMessage();
             }
         }
+        header("Location:index.php?page=login");
     }
 }
 

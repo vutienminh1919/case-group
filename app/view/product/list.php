@@ -26,10 +26,23 @@ include_once "inc/nav.php";
                     <td style="text-align: center"><?php echo $product["description"] ?></td>
                     <td style="text-align: center"><?php echo $product["name_category"] ?></td>
 
+<<<<<<< HEAD
                     <td><img width="100px" src="<?php echo $product["image"] ?>"</td>
                     <td><a type="button" class="btn btn-info" href="index.php?page=product-detail&id=<?php echo $product["id"] ?>">Detail</a></td>
                     <td><a type="button" class="btn btn-success" href="index.php?page=product-edit&id=<?php echo $product["id"] ?>">Edit</a></td>
                     <td><a type="button" class="btn btn-danger" onclick="return confirm('ARE YOU SURE?')" href="index.php?page=product-delete&id=<?php echo $product["id"] ?>">Delete</a></td>
+=======
+<!--                    <td>--><?php //echo $product["id"] ?><!--</td>-->
+<!--                    <td>--><?php //echo $product["name"] ?><!--</td>-->
+<!--                    <td>--><?php //echo number_format($product["price"] ) ?><!--</td>-->
+<!--                    <td>--><?php //echo $product["description"] ?><!--</td>-->
+<!--                    <td>--><?php //echo $product["name_category"] ?><!--</td>-->
+
+                    <td><img  width="100px" src="<?php echo $product["image"] ?>"</td>
+                    <td><a style="margin-top: 40px" type="button" class="btn btn-info" href="index.php?page=product-detail&id=<?php echo $product["id"] ?>">Detail</a></td>
+                    <td><a style="margin-top: 40px" type="button" class="btn btn-success" href="index.php?page=product-edit&id=<?php echo $product["id"] ?>">Edit</a></td>
+                    <td><a style="margin-top: 40px" type="button" class="btn btn-danger" onclick="return confirm('ARE YOU SURE?')" href="index.php?page=product-delete&id=<?php echo $product["id"] ?>">Delete</a></td>
+>>>>>>> ea83845245ae786ad560d7266abeec85548b7310
                 </tr>
             <?php endforeach; ?>
         <?php else: ?>
