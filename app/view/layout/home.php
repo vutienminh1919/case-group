@@ -9,8 +9,8 @@ $role = ($_SESSION["role"] ?? "");
         <div class="row">
             <?php foreach ($products as $product): ?>
 
-                <div class="col-3 mt-5" >
-                    <div class="card " >
+                <div class="col-3 mt-5"">
+                    <div class="card " style="background-color: saddlebrown" >
                             <img  src="<?php echo isset($product['image'])?$product['image']:'uploads/default.jpg';?>" class="card-img-top"  alt="..." style="width: 259px; height: 259px">
                         <div class="card-body" >
                             <h4 class="card-title" style="text-align: center; width: 240px;overflow: hidden;white-space: nowrap; text-overflow: ellipsis;"><?php echo $product["name"] ?></h4>

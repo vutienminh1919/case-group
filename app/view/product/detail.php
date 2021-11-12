@@ -6,7 +6,7 @@ include_once "inc/nav.php";
     <div class="row">
         <div class="col">
             <div>
-                <img style="margin-left: 100px" src="<?php echo $product['image']; ?>">
+                <img src="<?php echo $product['image']; ?>">
             </div>
 
         </div>

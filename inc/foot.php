@@ -2,7 +2,7 @@
     <div class="container mt-5">
         <div class="row ">
             <div class="col-lg-3 col-md-6 col-sm-12">
-                <h2><a href="#"><img src="uploads/lappdumb.jpg" width="60" height="60"
+                <h2 style="margin-top: 20px"><a href="https://www.facebook.com" target="_blank"><img src="uploads/lappdumb.jpg" width="60" height="60"
                                      alt=""></a></h2>
                 <p>
                     Bàn phím cơ là gì ?
@@ -10,11 +10,11 @@
                 </p>
             </div>
             <div id="address" class="col-lg-3 col-md-6 col-sm-12">
-                <h5>ĐỊA CHỈ</h5>
+                <h5 style="margin-top: 20px">ĐỊA CHỈ</h5>
                 <p> CodeGym - Số 23 - Lô-TT 01 - Hàm Nghi - Mỹ Đình2 - Nam Từ Liêm - Hà Nội</p>
             </div>
             <div id="business" class="col-lg-3 col-md-6 col-sm-12">
-                <h5>LĨNH VỰC KINH DOANH</h5>
+                <h5 style="margin-top: 20px">LĨNH VỰC KINH DOANH</h5>
                 <ul>
                     <li>Bàn phím cơ Akko</li>
                     <li>Bàn phím cơ Leopold</li>
@@ -25,7 +25,7 @@
                 </ul>
             </div>
             <div id="hotline" class="col-lg-3 col-md-6 col-sm-12">
-                <h5>LIÊN HỆ</h5>
+                <h5 style="margin-top: 20px">LIÊN HỆ</h5>
                 <p>Name: Vũ Tiến Minh</p>
                 <p>Name: Nguyễn Mạnh Chí Thành ( BOSS )</p>
                 <p>Phone 1: 0382.217.161</p>
