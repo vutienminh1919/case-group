@@ -12,8 +12,8 @@
         <!--    <input type="text" name="description" placeholder="mo ta san pham">-->
         <input type="text" name="category_id" placeholder="category san pham"><br><br>
         <input type="file" name="file" placeholder="anh san pham"><br><br>
-        <button type="submit" name="submit">them moi</button>
-        <a href="index.php?page=product-list">Back</a>
+        <button class="btn btn-success" type="submit" name="submit">ADD</button>
+        <a class="btn btn-danger" href="index.php?page=product-list">Back</a>
     </form>
 </div>
 

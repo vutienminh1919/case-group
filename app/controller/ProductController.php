@@ -104,8 +104,8 @@ class ProductController
     public function showResultSearch()
     {
         $key = $_GET["search"];
-        if (!isset($key)) {
-             var_dump("No result!!");
+        if (empty($key)) {
+             echo "<script>alert('No Result!!');window.location.href='index.php?page=home'</script>";
         }else {
             $products = $this->productModel->search($key);
             include "app/view/layout/home.php";
