@@ -26,6 +26,6 @@
 </div>
 <div class="container">
     <div class="row mt-5">
-        <h2  class="font" style="font-family: sans-serif">Sản phẩm ></h2>
+        <h2  class="font" style="font-family: sans-serif; " >PRODUCT </h2>
     </div>
 </div>
