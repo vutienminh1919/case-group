@@ -1,3 +1,44 @@
+<div id="footer-top" style="background-color: grey">
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <h2><a href="#"><img src="uploads/lappdumb.jpg" width="60" height="60"
+                                     alt=""></a></h2>
+                <p>
+                    Bàn phím cơ là gì ?
+                    Để hiểu một cách đơn giản, thì bàn phím cơ sử dụng các nút bấm (hay gọi nhanh theo tiếng Anh là switch) dạng khối cứng (solid), khác với phím bấm cao su phổ thông (membrane) mà chúng ta hay gặp thường ngày. Một chiếc bàn phím cơ khi gõ, sẽ đem lại cho chúng ta cảm giác bấm thật sự rõ ràng và rất “sướng tay”.
+                </p>
+            </div>
+            <div id="address" class="col-lg-3 col-md-6 col-sm-12">
+                <h5>ĐỊA CHỈ</h5>
+                <p> CodeGym - Số 23 - Lô-TT 01 - Hàm Nghi - Mỹ Đình2 - Nam Từ Liêm - Hà Nội</p>
+            </div>
+            <div id="business" class="col-lg-3 col-md-6 col-sm-12">
+                <h5>LĨNH VỰC KINH DOANH</h5>
+                <ul>
+                    <li>Bàn phím cơ Akko</li>
+                    <li>Bàn phím cơ Leopold</li>
+                    <li>Bàn phím cơ Filco</li>
+                    <li>Bàn phím cơ Logitech</li>
+                    <li>Bàn phím cơ Razer</li>
+                    <li>Bàn phím cơ Keychron</li>
+                </ul>
+            </div>
+            <div id="hotline" class="col-lg-3 col-md-6 col-sm-12">
+                <h5>LIÊN HỆ</h5>
+                <p>Name: Vũ Tiến Minh</p>
+                <p>Name: Nguyễn Mạnh Chí Thành ( BOSS )</p>
+                <p>Phone 1: 0382.217.161</p>
+                <p>Phone 2: 0352.359.396</p>
+                <p>Email: vutienminh1919@gmail.com</p>
+                <p>Email: thanh@gmail.com</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
@@ -8,8 +49,5 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
         integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
         crossorigin="anonymous"></script>
-<script><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
-        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-    </svg></script>
 </body>
 </html>

@@ -26,6 +26,7 @@ include_once "inc/nav.php";
 
         </div>
     </div>
+    </div>
 
 <?php
 include_once "inc/foot.php";

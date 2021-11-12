@@ -7,7 +7,7 @@ $page = (isset($_GET["page"])) ? $_GET["page"] : "";
 <div class="">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand active" href="index.php?page=home">HOME</a>
+            <a class="navbar-brand active" href="index.php?page=home"><i style="font-size: 45px" class="fab fa-steam"></i></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -56,7 +56,7 @@ $page = (isset($_GET["page"])) ? $_GET["page"] : "";
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
                                data-bs-toggle="dropdown" aria-expanded="false">
-                                ADD
+                                <i style="font-size: 30px" class="fas fa-plus"></i>
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="index.php?page=product-create">ADD NEW PRODUCT</a>
@@ -66,10 +66,10 @@ $page = (isset($_GET["page"])) ? $_GET["page"] : "";
                             </ul>
                         </li>
                         <?php endif; ?>
-                        <a class="nav-link active" style="color: red" href="index.php?page=show-cart"><i style="font-size: 20px" class="fas fa-shopping-cart"></i>
+                        <a class="nav-link active" style="color: red" href="index.php?page=show-cart"><i style="font-size: 30px" class="fas fa-shopping-cart"></i>
                             (<?php echo isset($_SESSION["cart"]) ? count($_SESSION["cart"]) : 0; ?>)</a>
                         <div class="dropdown">
-                            <a class="nav-link dropdown-toggle active" href="#" role="button" id="dropdownMenuLink"
+                            <a style="font-size: 20px" class="nav-link dropdown-toggle active" href="#" role="button" id="dropdownMenuLink"
                                data-bs-toggle="dropdown" aria-expanded="false">
                                 <?php echo $username; ?>
                             </a>
