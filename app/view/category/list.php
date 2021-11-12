@@ -1,7 +1,10 @@
+<?php
+include_once "inc/header.php";
+include_once "inc/nav.php";
+?>
 <div class="container">
-    <a href="index.php?page=category-create">add new category</a>
-    <table border="1px" class="table">
-        <thead class="table-dark">
+    <table border="1px" class="table table-bordered">
+        <thead class="table-dark" style="text-align: center" >
         <tr>
             <th>ID</th>
             <th>name</th>
@@ -12,11 +15,11 @@
         <?php if (isset($categories)): ?>
             <?php foreach ($categories as $category): ?>
                 <tr>
-                    <td><?php echo $category["id"] ?></td>
-                    <td><?php echo $category["name_category"] ?></td>
-                    <td><a onclick=" return confirm('are you sure ?')"
+                    <td style="text-align: center"><?php echo $category["id"] ?></td>
+                    <td style="text-align: center"><?php echo $category["name_category"] ?></td>
+                    <td style="text-align: center"><a type="button" class="btn btn-success" href="index.php?page=category-edit&id=<?php echo $category["id"] ?>">Edit</a></td>
+                    <td style="text-align: center"><a type="button" class="btn btn-danger" onclick=" return confirm('ARE YOU SURE?')"
                            href="index.php?page=category-delete&id=<?php echo $category["id"] ?>">Delete</a></td>
-                    <td><a href="index.php?page=category-edit&id=<?php echo $category["id"] ?>">Edit</a></td>
 
                 </tr>
             <?php endforeach; ?>

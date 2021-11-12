@@ -1,8 +1,10 @@
+<?php
+include_once "inc/header.php";
+include_once "inc/nav.php";
+?>
 <div class="container">
-
-    <a href="index.php?page=product-create">add new product</a>
-    <table border="1px" class="table table-bordered" style="border-collapse: collapse">
-        <thead class="table-dark">
+    <table border="1px" class="table table-bordered" >
+        <thead class="table-dark" style="text-align: center">
         <tr>
             <th>ID</th>
             <th>name</th>
@@ -11,23 +13,21 @@
             <th>Category name</th>
             <th>image</th>
             <th colspan="3">Action</th>
-
         </tr>
         </thead>
         <tbody>
         <?php if (isset($products)): ?>
             <?php foreach ($products as $product): ?>
                 <tr>
-                    <td><?php echo $product["id"] ?></td>
-                    <td><?php echo $product["name"] ?></td>
-                    <td><?php echo $product["price"] ?></td>
-                    <td><?php echo $product["description"] ?></td>
-                    <td><?php echo $product["name_category"] ?></td>
+                    <td style="text-align: center"><?php echo $product["id"] ?></td>
+                    <td style="text-align: center"><?php echo $product["name"] ?></td>
+                    <td style="text-align: center"><?php echo number_format($product["price"]) ?>₫</td>
+                    <td style="text-align: center"><?php echo $product["description"] ?></td>
+                    <td style="text-align: center"><?php echo $product["name_category"] ?></td>
                     <td><img width="100px" src="<?php echo $product["image"] ?>"</td>
-                    <td><a onclick="return confirm('Are you sure ?')" href="index.php?page=product-delete&id=<?php echo $product["id"] ?>">Xóa</a></td>
-                    <td><a href="index.php?page=product-edit&id=<?php echo $product["id"] ?>">Sửa</a></td>
-                    <td><a href="index.php?page=product-detail&id=<?php echo $product["id"] ?>">Chi tiết</a></td>
-
+                    <td><a type="button" class="btn btn-info" href="index.php?page=product-detail&id=<?php echo $product["id"] ?>">Detail</a></td>
+                    <td><a type="button" class="btn btn-success" href="index.php?page=product-edit&id=<?php echo $product["id"] ?>">Edit</a></td>
+                    <td><a type="button" class="btn btn-danger" onclick="return confirm('ARE YOU SURE?')" href="index.php?page=product-delete&id=<?php echo $product["id"] ?>">Delete</a></td>
                 </tr>
             <?php endforeach; ?>
         <?php else: ?>
@@ -38,5 +38,8 @@
         </tbody>
     </table>
 </div>
+<?php
+include_once "inc/foot.php";
+?>
 
 

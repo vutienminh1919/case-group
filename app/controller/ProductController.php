@@ -65,7 +65,6 @@ class ProductController
         $this->productModel->delete($id);
         include_once "app/view/product/delete.php";
         header("Location:index.php?page=product-list");
-
     }
 
     public function showFormEdit()
@@ -114,7 +113,7 @@ class ProductController
     {
         $cart = isset($_SESSION["cart"]) ? $_SESSION["cart"] : [];
         $product = $this->productModel->getById($id);
-        if (isset($cart[$id])) {
+        if (!isset($cart[$id])) {
             $cart[$id] = array(
                 "id" => $product["id"],
                 "name" => $product["name"],
@@ -122,15 +121,19 @@ class ProductController
                 "price" => $product["price"],
                 "quantity" => 1
             );
-        }else {
-            $cart[$id]["quantity"] += 1;
+        } else {
+            $cart[$id]["quantity"] ++;
         }
         $_SESSION["cart"] = $cart;
+//        echo "<pre>";
+//        var_dump($_SESSION["cart"]);
+//        die();
         header("location:index.php?page=home");
     }
 
     public function showCart()
     {
-        include_once "app/view/layout/cart";
+        $products = isset($_SESSION["cart"]) ? $_SESSION["cart"] : [];
+        include_once "app/view/layout/cart.php";
     }
 }

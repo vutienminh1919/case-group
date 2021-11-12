@@ -21,7 +21,10 @@ img.d-block.w-100 {
 .card-text{
     font-weight: 700;
 }
-.card {
-
+.cardtotal {
+    width: 100%;
+    max-width: 100%;
 }
-
+image{
+    max-width: 100%;
+}

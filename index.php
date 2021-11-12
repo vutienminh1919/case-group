@@ -22,8 +22,6 @@ $categoryModel = new CategoryModel();
 $page = (isset($_GET["page"])) ? $_GET["page"] : "";
 $username = ($_SESSION["username"] ?? "");
 $role = ($_SESSION["role"] ?? "");
-//var_dump($role);
-//die();
 ?>
 <!doctype html>
 <html lang="en">
@@ -39,14 +37,6 @@ $role = ($_SESSION["role"] ?? "");
 
 </head>
 <body>
-<div class="navbar container">
-    <p>Name: <?php echo $username; ?></p>
-    <a href="index.php?page=logout">Logout</a>
-    <a href="index.php?page=product-list">Product</a>
-    <a href="index.php?page=category-list">Category</a>
-    <a href="index.php?page=user-list">User</a>
-    <a href="index.php?page=home">Home</a>
-</div>
 <?php
 switch ($page) {
     case "product-list":
@@ -55,8 +45,7 @@ switch ($page) {
             $productController->index();
         }
         break;
-    case
-    "product-create":
+    case "product-create":
         if ($_SERVER["REQUEST_METHOD"] == "GET") {
             $productController->showFormCreate();
         } else {
@@ -83,8 +72,11 @@ switch ($page) {
         $productController->showResultSearch();
         break;
     case "product-cart":
-        $id = $_GET["cart"]
-        $productController->showF();
+        $id = $_GET["id"];
+        $productController->addToCart($id);
+    case "show-cart":
+        $productController->showCart();
+        break;
     case "category-list":
         $authController->checkAuth();
         $categoryController->index();
