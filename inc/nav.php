@@ -66,7 +66,7 @@ $page = (isset($_GET["page"])) ? $_GET["page"] : "";
                             </ul>
                         </li>
                         <?php endif; ?>
-                        <a class="nav-link active" style="color: red" href="index.php?page=show-cart">CART
+                        <a class="nav-link active" style="color: red" href="index.php?page=show-cart"><i style="font-size: 20px" class="fas fa-shopping-cart"></i>
                             (<?php echo isset($_SESSION["cart"]) ? count($_SESSION["cart"]) : 0; ?>)</a>
                         <div class="dropdown">
                             <a class="nav-link dropdown-toggle active" href="#" role="button" id="dropdownMenuLink"
