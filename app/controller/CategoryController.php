@@ -64,4 +64,10 @@ class CategoryController
 
     }
 
+    public function getCategoryAkko($id)
+    {
+        $akkos = $this->categoryModel->getAkko($id);
+        include_once "app/view/category/product-list.php";
+    }
+
 }

@@ -230,6 +230,7 @@ function validate($data): bool
 
             </fieldset>
             <button type="submit" name="submit">Sign Up</button>
+            <a href="index.php?page=login" type="button" class="btn btn-danger">Back</a>
 
         </form>
     </div>

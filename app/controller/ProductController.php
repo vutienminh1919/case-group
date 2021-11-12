@@ -136,4 +136,5 @@ class ProductController
         $products = isset($_SESSION["cart"]) ? $_SESSION["cart"] : [];
         include_once "app/view/layout/cart.php";
     }
+
 }
