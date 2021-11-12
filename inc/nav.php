@@ -53,7 +53,7 @@ $page = (isset($_GET["page"])) ? $_GET["page"] : "";
                     <form class="d-flex" action="" method="get">
                         <input class="form-control me-2" type="search" name="search" placeholder="Search"
                                aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
+                        <button class="btn btn-outline-success" type="submit" value="find">Search</button>
                     </form>
                 </ul>
                 <?php if ($role == 1) : ?>

@@ -38,9 +38,9 @@ class ProductModel extends BaseModel
         return $stmt->fetchAll();
     }
 
-    public function search($id)
+    public function search($key)
     {
-        $sql = "select * from $this->table where name like %$id% or description like %$id%";
+        $sql = "select * from $this->table where name like '%$key%' or description like '%$key%'";
         $stmt = $this->dbConnect->query($sql);
         return $stmt->fetchAll();
     }

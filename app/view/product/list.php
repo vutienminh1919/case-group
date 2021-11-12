@@ -3,7 +3,7 @@ include_once "inc/header.php";
 include_once "inc/nav.php";
 ?>
 <div class="container">
-    <table border="1px" class="table table-bordered"  style="margin-top: 100px !important;">
+    <table border="1px" class="table table-bordered"  style="margin-top: 100px !important; z-index: 0">
         <thead class="table-dark" style="text-align: center" >
         <tr>
             <th>ID</th>
@@ -25,12 +25,6 @@ include_once "inc/nav.php";
                     <td style="text-align: center"><?php echo number_format($product["price"]) ?>₫</td>
                     <td style="text-align: center"><?php echo $product["description"] ?></td>
                     <td style="text-align: center"><?php echo $product["name_category"] ?></td>
-
-                    <td><?php echo $product["id"] ?></td>
-                    <td><?php echo $product["name"] ?></td>
-                    <td><?php echo number_format($product["price"] ) ?></td>
-                    <td><?php echo $product["description"] ?></td>
-                    <td><?php echo $product["name_category"] ?></td>
 
                     <td><img width="100px" src="<?php echo $product["image"] ?>"</td>
                     <td><a type="button" class="btn btn-info" href="index.php?page=product-detail&id=<?php echo $product["id"] ?>">Detail</a></td>

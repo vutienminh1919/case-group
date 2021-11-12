@@ -74,6 +74,7 @@ switch ($page) {
     case "product-cart":
         $id = $_GET["id"];
         $productController->addToCart($id);
+        break;
     case "show-cart":
         $productController->showCart();
         break;
@@ -125,10 +126,22 @@ switch ($page) {
         }
         break;
     case "home":
-        $productController->home();
+        if(!isset($_GET["search"])){
+            $productController->home();
+
+        }else{
+            $productController->showResultSearch();
+
+        }
         break;
     default:
+        if(!isset($_GET["search"])){
             $productController->home();
+
+        }else{
+            $productController->showResultSearch();
+
+        }
 }
 ?>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
@@ -136,6 +149,5 @@ switch ($page) {
         crossorigin="anonymous"></script>
 </body>
 </html>
-123124124
 
 

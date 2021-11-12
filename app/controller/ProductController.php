@@ -103,9 +103,13 @@ class ProductController
 
     public function showResultSearch()
     {
-        $id = $_GET["search"];
-        $product = $this->productModel->search($id);
-        include "app/view/layout/search.php";
+        $key = $_GET["search"];
+        if (!isset($key)) {
+             var_dump("No result!!");
+        }else {
+            $products = $this->productModel->search($key);
+            include "app/view/layout/home.php";
+        }
     }
 
 
