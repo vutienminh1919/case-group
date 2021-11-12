@@ -105,7 +105,7 @@ class ProductController
     {
         $key = $_GET["search"];
         if (empty($key)) {
-             echo "<script>alert('No Result!!');window.location.href='index.php?page=home'</script>";
+             echo "<script>alert('Input Search!!');window.location.href='index.php?page=home'</script>";
         }else {
             $products = $this->productModel->search($key);
             include "app/view/layout/home.php";
@@ -133,6 +133,16 @@ class ProductController
 //        var_dump($_SESSION["cart"]);
 //        die();
         header("location:index.php?page=home");
+    }
+
+    public function removeItem($id)
+    {
+        $cart = isset($_SESSION["cart"]) ? $_SESSION["cart"] : [];
+        unset($cart[$id]);
+        $_SESSION["cart"] = $cart;
+        header("location:index.php?page=show-cart");
+
+
     }
 
     public function showCart()

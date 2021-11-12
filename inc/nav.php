@@ -24,7 +24,7 @@ $page = (isset($_GET["page"])) ? $_GET["page"] : "";
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <?php foreach ($categories as $category) : ?>
 
-                                <li><a class="dropdown-item" target="_blank" href="index.php?page=category-product-list&id=<?php echo $category["id"];?>"><?php echo $category["name_category"] ?></a></li>
+                                <li><a class="dropdown-item" target="_blank"  href="index.php?page=category-product-list&id=<?php echo $category["id"];?>"><?php echo $category["name_category"] ?></a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
@@ -69,12 +69,12 @@ $page = (isset($_GET["page"])) ? $_GET["page"] : "";
                         <a class="nav-link active" style="color: red" href="index.php?page=show-cart"><i style="font-size: 30px" class="fas fa-shopping-cart"></i>
                             (<?php echo isset($_SESSION["cart"]) ? count($_SESSION["cart"]) : 0; ?>)</a>
                         <div class="dropdown">
-                            <a style="font-size: 20px" class="nav-link dropdown-toggle active" href="#" role="button" id="dropdownMenuLink"
+                            <a style="font-size: 25px; color: crimson" class="nav-link dropdown-toggle active" href="#" role="button" id="dropdownMenuLink"
                                data-bs-toggle="dropdown" aria-expanded="false">
                                 <?php echo $username; ?>
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                <li><a class="dropdown-item" href="index.php?page=logout">LOGOUT</a></li>
+                                <li><a  class="dropdown-item" href="index.php?page=logout">LOGOUT</a></li>
                             </ul>
                         </div>
                 </div>

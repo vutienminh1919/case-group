@@ -32,7 +32,7 @@ include_once "inc/nav.php";
                     <td style="text-align: center"><?php echo number_format($product["quantity"] * $product["price"]) ?>₫</td>
                     <td style="text-align: center"><a type="button" class="btn btn-danger"
                                                       onclick="return confirm('ARE YOU SURE?')"
-                                                      href="index.php?page=product-delete&id=<?php echo $product["id"] ?>">Delete</a>
+                                                      href="index.php?page=remove-item&id=<?php echo $product["id"];?>" >Delete</a>
                     </td>
                 </tr>
             <?php endforeach; ?>
@@ -48,6 +48,7 @@ include_once "inc/nav.php";
         </tbody>
     </table>
 </div>
+
 
 <?php
 include_once "inc/foot.php";

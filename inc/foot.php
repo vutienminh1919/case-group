@@ -1,6 +1,6 @@
-<div id="footer-top" style="background-color: grey">
+<div id="footer-top" style="background-color: grey; color: white">
     <div class="container mt-5">
-        <div class="row">
+        <div class="row ">
             <div class="col-lg-3 col-md-6 col-sm-12">
                 <h2><a href="#"><img src="uploads/lappdumb.jpg" width="60" height="60"
                                      alt=""></a></h2>
@@ -31,7 +31,7 @@
                 <p>Phone 1: 0382.217.161</p>
                 <p>Phone 2: 0352.359.396</p>
                 <p>Email: vutienminh1919@gmail.com</p>
-                <p>Email: thanh@gmail.com</p>
+                <p>Email: chithanhvtpt@gmail.com</p>
             </div>
         </div>
     </div>
