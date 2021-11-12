@@ -22,16 +22,19 @@ class AuthController
 
     public function login($request)
     {
-        $email = $request["email"];
-        $password = $request["password"];
-        if ($this->userModel->checkLogin($email, $password)) {
-            $user = $this->userModel->getByEmail($email);
-            $_SESSION["username"] = $user["name"];
-            $_SESSION["role"] = $user["role"];
-            header("Location:index.php?page=home");
+        if ($email = $request["email"] and $password = $request["password"]) {
+            if ($this->userModel->checkLogin($email, $password)) {
+                $user = $this->userModel->getByEmail($email);
+                $_SESSION["username"] = $user["name"];
+                $_SESSION["role"] = $user["role"];
+                header("Location:index.php?page=home");
+            } else {
+                echo "<script>alert('Sai tài khoản hoặc mât khẩu');window.location.href='index.php?page=login'</script>";
+            }
         } else {
-            var_dump("tai khoan khong dung");
+            echo "<script>alert('Chưa nhập tài khoản và mật khẩu');window.location.href='index.php?page=login'</script>";
         }
+
 
     }
 
@@ -46,7 +49,7 @@ class AuthController
     public function checkAuth()
     {
         if (!isset($_SESSION["username"])) {
-            header("Location:index.php?page=login");
+            echo "<script>alert('Bạn cần đăng nhập !!');window.location.href='index.php?page=login'</script>";
         }
 
     }
@@ -70,7 +73,7 @@ class AuthController
                 echo $e->getMessage();
             }
         }
-        header("Location:index.php?page=login");
+        echo "<script>alert('Đăng kí thành công!!');window.location.href='index.php?page=login'</script>";
     }
 }
 

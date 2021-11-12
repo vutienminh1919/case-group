@@ -4,16 +4,20 @@ namespace App\controller;
 
 use App\model\CategoryModel;
 use App\model\ProductModel;
+use App\controller\AuthController;
+
 
 class ProductController
 {
     private $productModel;
     private $categoryModel;
+    private $authController;
 
     public function __construct()
     {
         $this->productModel = new ProductModel();
         $this->categoryModel = new CategoryModel();
+        $this->authController = new AuthController();
 
     }
 
@@ -115,6 +119,7 @@ class ProductController
 
     public function addToCart($id)
     {
+
         $cart = isset($_SESSION["cart"]) ? $_SESSION["cart"] : [];
         $product = $this->productModel->getById($id);
         if (!isset($cart[$id])) {
@@ -140,7 +145,7 @@ class ProductController
         $cart = isset($_SESSION["cart"]) ? $_SESSION["cart"] : [];
         unset($cart[$id]);
         $_SESSION["cart"] = $cart;
-        header("location:index.php?page=show-cart");
+        header("location:index.php?page=show-cart ");
 
 
     }

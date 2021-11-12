@@ -74,6 +74,7 @@ switch ($page) {
         $productController->showResultSearch();
         break;
     case "product-cart":
+        $authController->checkAuth();
         $id = $_GET["id"];
         $productController->addToCart($id);
         break;
@@ -82,6 +83,7 @@ switch ($page) {
         $productController->removeItem($id);
         break;
     case "show-cart":
+        $authController->checkAuth();
         $productController->showCart();
         break;
     case "category-list":
