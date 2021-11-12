@@ -2,7 +2,7 @@
 include_once "inc/header.php";
 include_once "inc/nav.php";
 ?>
-<table border="1px" class="table table-bordered container">
+<table border="1px" class="table table-bordered container"  style="margin-top: 100px !important;">
     <thead class="table-dark" style="text-align: center">
     <tr>
         <th>ID</th>

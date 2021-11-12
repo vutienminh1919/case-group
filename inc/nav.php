@@ -5,7 +5,7 @@ $username = ($_SESSION["username"] ?? "");
 $page = (isset($_GET["page"])) ? $_GET["page"] : "";
 ?>
 <div class="">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
             <a class="navbar-brand active" href="index.php?page=home">HOME</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -21,6 +21,7 @@ $page = (isset($_GET["page"])) ? $_GET["page"] : "";
                             CATEGORY
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
                             <?php foreach ($categories as $category) : ?>
 
                                 <li><a class="dropdown-item" href="#"><?php echo $category["name_category"] ?></a></li>
@@ -28,6 +29,13 @@ $page = (isset($_GET["page"])) ? $_GET["page"] : "";
                                     <hr class="dropdown-divider">
                                 </li>
                             <?php endforeach; ?>
+
+                            <?php foreach ($categories as $category) :?>
+                            <li><a class="dropdown-item" href="#"><?php echo $category["name_category"]?></a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <?php endforeach; ?>
+
+
                         </ul>
                     </li>
                     <?php if ($role == 1) : ?>

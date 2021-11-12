@@ -3,7 +3,7 @@ include_once "inc/header.php";
 include_once "inc/nav.php";
 ?>
 <div class="container">
-    <table border="1px" class="table table-bordered">
+    <table border="1px" class="table table-bordered"  style="margin-top: 100px !important;">
         <thead class="table-dark" style="text-align: center" >
         <tr>
             <th>ID</th>
