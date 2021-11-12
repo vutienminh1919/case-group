@@ -97,6 +97,7 @@ class ProductController
     public function home()
     {
         $products = $this->productModel->getAll();
+        $categories = $this->categoryModel->getAll();
         include_once "app/view/layout/home.php";
 
     }

@@ -20,12 +20,11 @@ $username = ($_SESSION["username"] ?? "");
                             CATEGORY
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <?php foreach ($categories as $category) :?>
+                            <li><a class="dropdown-item" href="#"><?php echo $category["name_category"]?></a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <?php endforeach; ?>
+
                         </ul>
                     </li>
                     <?php if ($role == 1) : ?>

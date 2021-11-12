@@ -10,10 +10,10 @@ include_once "inc/nav.php";
             <th>ID</th>
             <th>name</th>
             <th>price</th>
-            <th>description</th>
+            <th style="text-align: center">description</th>
             <th>Category name</th>
             <th>image</th>
-            <th colspan="3">Action</th>
+            <th style="text-align: center" colspan="3">Action</th>
         </tr>
         </thead>
         <tbody>
@@ -22,7 +22,7 @@ include_once "inc/nav.php";
                 <tr>
                     <td><?php echo $product["id"] ?></td>
                     <td><?php echo $product["name"] ?></td>
-                    <td><?php echo $product["price"] ?></td>
+                    <td><?php echo number_format($product["price"] ) ?></td>
                     <td><?php echo $product["description"] ?></td>
                     <td><?php echo $product["name_category"] ?></td>
                     <td><img width="100px" src="<?php echo $product["image"] ?>"</td>
